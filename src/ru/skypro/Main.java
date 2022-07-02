@@ -1,29 +1,27 @@
 package ru.skypro;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
 
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            String s = list.get(i);
-            list.set(i, s + "!");
-            System.out.println(s);
-        }
-        for (String s : list) {
-            System.out.println(s);
+        doTask1();
+    }
+
+    private static void doTask1() {
+        List<Integer> nums = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7));
+        for (Integer i : nums) {
+            if (Objects.nonNull(i) && i % 2 == 1){
+                System.out.println(i);
+            }
         }
 
+    }
 
-        Iterator var4 = list.iterator();
-
-        while (var4.hasNext()) {
-            String s = (String) var4.next();
-            System.out.println(s);
-        }
+    private  static void doTask2() {
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 5, 5, 6, 7 ));
 
     }
 }
